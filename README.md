@@ -18,4 +18,4 @@ Tracking my progress through the course.
 
 ✅ Complete
 
-[Back To The Top](#react-practice-course-learn-by-practicing-2021-edition-)
+[Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
