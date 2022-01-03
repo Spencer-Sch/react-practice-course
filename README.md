@@ -34,5 +34,7 @@ Tracking my progress through the course.
 ✅ Lesson 4: Toggling header state - Complete <br>
 ✅ Lesson 5: Creating the footer - Complete <br>
 ✅ Lesson 6: Adding a carrousel - Complete <br>
+✅ Lesson 7: Creating the countdown - Complete <br>
+✅ Lesson 8: Finishing the countdown - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
