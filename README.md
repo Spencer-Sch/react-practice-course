@@ -14,7 +14,7 @@ Tracking my progress through the course.
 
 ## Course Projects
 
-### Project 1: [The Venue](./the_venue/README.md)
+### Project 1: [The Venue](./the_venue)
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
 
