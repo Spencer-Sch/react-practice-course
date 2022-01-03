@@ -12,32 +12,15 @@ Tracking my progress through the course.
 
 ---
 
-## How To Use
+## Course Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Installation
-
-1. Clone the repo
-2. In the project directory run `npm install`
-
-### Available Scripts
-
-In the project directory, you can run:
-
-`npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Project 1: [The Venue](./the_venue/README.md)
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
 
 ---
 
-## Course Sections
+## Course Progress
 
 #### Section 1: Getting Started
 
@@ -45,6 +28,10 @@ You will also see any lint errors in the console.
 
 #### Section 2: Project One: The venue
 
-✅ Lesson 1: starting a fresh project - Complete
+✅ Lesson 1: Starting a fresh project - Complete <br>
+✅ Lesson 2: Creating the header - Complete <br>
+✅ Lesson 3: the sidedrawer - Complete <br>
+✅ Lesson 4: Toggling header state - Complete <br>
+✅ Lesson 5: Creating the footer - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
