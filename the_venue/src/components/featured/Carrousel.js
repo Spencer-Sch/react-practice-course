@@ -32,6 +32,8 @@ const Corrousel = () => {
               height: `${window.innerHeight}px`,
             }}
           ></div>
+        </div>
+        <div>
           <div
             className="carrousel_image"
             style={{
@@ -39,6 +41,8 @@ const Corrousel = () => {
               height: `${window.innerHeight}px`,
             }}
           ></div>
+        </div>
+        <div>
           <div
             className="carrousel_image"
             style={{
