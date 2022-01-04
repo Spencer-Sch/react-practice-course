@@ -40,5 +40,6 @@ Tracking my progress through the course.
 ✅ Lesson 10: Creating the highlights - Complete <br>
 ✅ Lesson 11: Reusable button - Complete <br>
 ✅ Lesson 12: Pricing section - Complete <br>
+✅ Lesson 13: Gmaps component - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
