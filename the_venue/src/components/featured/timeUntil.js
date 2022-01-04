@@ -11,6 +11,8 @@ const getEventDate = () => {
   return eventDate;
 };
 
+export { getEventDate };
+
 const TimeUntil = () => {
   const [time, setTime] = useState({
     days: '0',
