@@ -8,9 +8,10 @@ Dummy site for a music venue
 
 ✅ JavaScript </br>
 ✅ React </br>
-✅ Material-UI v4.12.3 [documentation](https://v4.mui.com/) </br>
-✅ React-Awesome-Reveal [documentation](https://github.com/morellodev/react-awesome-reveal) </br>
-✅ React-Slick [documentation](https://github.com/akiran/react-slick) </br>
+✅ Material-UI v4.12.3 [docs](https://v4.mui.com/) </br>
+✅ React-Awesome-Reveal [docs](https://github.com/morellodev/react-awesome-reveal) </br>
+✅ React-Slick [docs](https://github.com/akiran/react-slick) </br>
+✅ React-Scroll [docs](https://www.npmjs.com/package/react-scroll) </br>
 
 ---
 
