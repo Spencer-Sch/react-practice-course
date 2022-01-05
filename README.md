@@ -50,5 +50,6 @@ Tracking my progress through the course.
 #### Section 3: Project Two: M.City
 
 ✅ Lesson 1: Installation - Complete <br>
+✅ Lesson 2: The Header - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
