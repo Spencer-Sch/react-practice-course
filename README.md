@@ -52,5 +52,6 @@ Tracking my progress through the course.
 ✅ Lesson 1: Installation - Complete <br>
 ✅ Lesson 2: The Header - Complete <br>
 ✅ Lesson 3: Creating the footer and the logo - Complete <br>
+✅ Lesson 4: Sign in users - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
