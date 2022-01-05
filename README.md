@@ -16,6 +16,8 @@ Tracking my progress through the course.
 
 ### Project 1: [The Venue](./the_venue)
 
+### Project 2: [M.City](./m_city)
+
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
 
 ---
@@ -44,5 +46,9 @@ Tracking my progress through the course.
 ✅ Lesson 14: Adding the scroll to - Complete <br>
 
 ✅ PROJECT COMPLETE
+
+#### Section 3: Project Two: M.City
+
+✅ Lesson 1: Installation - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
