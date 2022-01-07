@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { firebase } from '../../firebase';
+import { firebase } from '../../firebase';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import { CircularProgress } from '@material-ui/core';
@@ -30,8 +30,9 @@ const SignIn = (props) => {
   });
 
   const submitForm = (values) => {
-    // console.log(firebase);
-    const auth = getAuth();
+    // This portion needed updating to work with current firebase auth
+    const auth = getAuth(firebase);
+
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(() => {
         // show success toast
@@ -42,19 +43,6 @@ const SignIn = (props) => {
         alert(error);
         /// show toast
       });
-
-    // firebase
-    //   .auth()
-    //   .signInWithEmailAndPassword(values.email, values.password)
-    //   .then(() => {
-    //     // show success toast
-    //     props.history.push('/dashboard');
-    //   })
-    //   .catch((error) => {
-    //     setLoading(false);
-    //     alert(error);
-    //     /// show toast
-    //   });
   };
 
   return (
