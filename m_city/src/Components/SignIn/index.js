@@ -8,6 +8,7 @@ import { Redirect } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { AlternateEmail } from '@material-ui/icons';
+import { showErrorToast, showSuccessToast } from '../Utils/tools';
 
 const SignIn = (props) => {
   const [loading, setLoading] = useState(false);
@@ -35,13 +36,12 @@ const SignIn = (props) => {
 
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(() => {
-        // show success toast
+        showSuccessToast('Welcome back!');
         props.history.push('/dashboard');
       })
       .catch((error) => {
         setLoading(false);
-        alert(error);
-        /// show toast
+        showErrorToast(error.message);
       });
   };
 

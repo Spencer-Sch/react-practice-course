@@ -5,17 +5,18 @@ import { Link } from 'react-router-dom';
 import { CityLogo } from '../Utils/tools';
 import { firebase } from '../../firebase';
 import { getAuth, signOut } from 'firebase/auth';
-import {} from 'firebase/auth';
+
+import { showErrorToast, showSuccessToast } from '../Utils/tools';
 
 const Header = ({ user }) => {
   const logoutHandler = () => {
     const auth = getAuth(firebase);
     signOut(auth)
       .then(() => {
-        alert('signed out');
+        showSuccessToast('Goodbye!');
       })
       .catch((error) => {
-        alert(error);
+        showErrorToast(error.message);
       });
   };
 

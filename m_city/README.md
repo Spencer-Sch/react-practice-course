@@ -12,6 +12,7 @@ Dummy site for the Manchester City soccer team
 ✅ Formik [docs](https://formik.org/) </br>
 ✅ React-Awesome-Reveal [docs](https://github.com/morellodev/react-awesome-reveal) </br>
 ✅ React Router v5.2.0 [docs](https://v5.reactrouter.com/) </br>
+✅ React Toastify v7.0.3 [docs](https://fkhadra.github.io/react-toastify/introduction/) </br>
 
 ---
 
