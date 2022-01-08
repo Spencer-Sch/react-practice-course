@@ -7,15 +7,16 @@ import Header from './Components/Header_footer/Header';
 import Footer from './Components/Header_footer/Footer';
 import Home from './Components/Home';
 import SignIn from './Components/SignIn';
+import Dashboard from './Components/Admin/Dashboard';
+import AuthGuard from './Hoc/Auth';
 
 const Routes = ({ user }) => {
-  console.log(user);
-
   return (
     <BrowserRouter>
       <Header user={user} />
       <Switch>
-        <Route path="/sign_in" component={SignIn} />
+        <Route path="/dashboard" exact component={AuthGuard(Dashboard)} />
+        <Route path="/sign_in" exact component={SignIn} />
         <Route path="/" exact component={Home} />
       </Switch>
       <ToastContainer />
