@@ -16,7 +16,11 @@ const Routes = ({ user }) => {
       <Header user={user} />
       <Switch>
         <Route path="/dashboard" exact component={AuthGuard(Dashboard)} />
-        <Route path="/sign_in" exact component={SignIn} />
+        <Route
+          path="/sign_in"
+          exact
+          component={(props) => <SignIn {...props} user={user} />}
+        />
         <Route path="/" exact component={Home} />
       </Switch>
       <ToastContainer />
