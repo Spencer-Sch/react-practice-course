@@ -6,12 +6,12 @@ import Footer from './Components/Header_footer/Footer';
 import Home from './Components/Home';
 import SignIn from './Components/SignIn';
 
-const Routes = (props) => {
-  console.log(props);
+const Routes = ({ user }) => {
+  console.log(user);
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header user={user} />
       <Switch>
         <Route path="/sign_in" component={SignIn} />
         <Route path="/" exact component={Home} />
