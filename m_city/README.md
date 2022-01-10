@@ -13,6 +13,8 @@ Dummy site for the Manchester City soccer team
 ✅ React-Awesome-Reveal [docs](https://github.com/morellodev/react-awesome-reveal) </br>
 ✅ React Router v5.2.0 [docs](https://v5.reactrouter.com/) </br>
 ✅ React Toastify v7.0.3 [docs](https://fkhadra.github.io/react-toastify/introduction/) </br>
+✅ React Move v16.3.0 [docs](https://github.com/sghall/react-move) </br>
+✅ D3 Ease v2.0.0 [docs](https://www.npmjs.com/package/d3-ease/v/2.0.0) </br>
 
 ---
 

@@ -57,5 +57,6 @@ Tracking my progress through the course.
 ✅ Lesson 6: Log out and toasts - Complete <br>
 ✅ Lesson 7: Auth Guards - Complete <br>
 ✅ Lesson 8: Creating the dashboard layout - Complete <br>
+✅ Lesson 9: Starting with React-move part one - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
