@@ -59,5 +59,6 @@ Tracking my progress through the course.
 ✅ Lesson 8: Creating the dashboard layout - Complete <br>
 ✅ Lesson 9: Starting with React-move part one - Complete <br>
 ✅ Lesson 10: Starting with React-move part two - Complete <br>
+✅ Lesson 11: Animating the stripes - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
