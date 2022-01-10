@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { firebase } from '../../firebase';
+import { getAuth, signOut } from 'firebase/auth';
+
 import { toast } from 'react-toastify';
 
 import mcitylogo from '../../Resources/images/logos/manchester_city_logo.png';
@@ -38,4 +41,15 @@ export const showSuccessToast = (msg) => {
   toast.success(msg, {
     position: toast.POSITION.TOP_LEFT,
   });
+};
+
+export const logoutHandler = () => {
+  const auth = getAuth(firebase);
+  signOut(auth)
+    .then(() => {
+      showSuccessToast('Goodbye!');
+    })
+    .catch((error) => {
+      showErrorToast(error.message);
+    });
 };
