@@ -8,6 +8,8 @@ Dummy site for the Manchester City soccer team
 
 ✅ JavaScript </br>
 ✅ React </br>
+✅ Firebase Auth </br>
+✅ Firestore </br>
 ✅ Material-UI v4.12.3 [docs](https://v4.mui.com/) </br>
 ✅ Formik [docs](https://formik.org/) </br>
 ✅ React-Awesome-Reveal [docs](https://github.com/morellodev/react-awesome-reveal) </br>
