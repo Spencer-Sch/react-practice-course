@@ -18,19 +18,49 @@ let cards = [
     player: Sterling,
   },
   {
-    bottom: 0,
-    left: 0,
+    bottom: 30,
+    left: 100,
     player: Otamendi,
   },
   {
-    bottom: 90,
-    left: 300,
+    bottom: 0,
+    left: 0,
     player: Kompany,
   },
 ];
 
 const HomeCards = (props) => {
-  const showAnimateCards = () => cards.map((card, i) => <Animate></Animate>);
+  const showAnimateCards = () =>
+    cards.map((card, i) => (
+      <Animate
+        key={i}
+        show={true}
+        start={{
+          left: 0,
+          bottom: 0,
+        }}
+        enter={{
+          left: [card.left],
+          bottom: [card.bottom],
+          timing: {
+            duration: 500,
+            ease: easePolyOut,
+          },
+        }}
+      >
+        {({ left, bottom }) => (
+          <div
+            style={{
+              position: 'absolute',
+              left,
+              bottom,
+            }}
+          >
+            player
+          </div>
+        )}
+      </Animate>
+    ));
 
   return <div>{showAnimateCards()}</div>;
 };
