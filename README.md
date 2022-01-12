@@ -66,5 +66,6 @@ Tracking my progress through the course.
 ✅ Lesson 15: Home matches part two - Complete <br>
 ✅ Lesson 16: Meet the players part one - Complete <br>
 ✅ Lesson 17: Meet the players part two - Complete <br>
+✅ Lesson 18: Email promotion form - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
