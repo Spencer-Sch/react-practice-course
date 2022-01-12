@@ -63,5 +63,6 @@ Tracking my progress through the course.
 ✅ Lesson 12: Finishing animations - Complete <br>
 ✅ Lesson 13: Importing data to firestore - Complete <br>
 ✅ Lesson 14: Home matches part one - Complete <br>
+✅ Lesson 15: Home matches part two - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
