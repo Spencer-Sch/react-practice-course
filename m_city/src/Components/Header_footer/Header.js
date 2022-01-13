@@ -30,6 +30,11 @@ const Header = ({ user }) => {
         <Link to="/the_matches">
           <Button color="inherit">Matches</Button>
         </Link>
+        {!user ? (
+          <Link to="/sign_in">
+            <Button color="inherit">Sign in</Button>
+          </Link>
+        ) : null}
         {user ? (
           <>
             <Link to="/dashboard">
