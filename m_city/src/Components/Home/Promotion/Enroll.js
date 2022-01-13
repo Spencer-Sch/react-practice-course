@@ -7,9 +7,33 @@ import * as Yup from 'yup';
 
 import { showErrorToast, showSuccessToast } from '../../Utils/tools';
 import { promotionsCollection } from '../../../firebase';
+import { getDocs, addDoc, query, where } from 'firebase/firestore';
 
 const Enroll = () => {
   const [loading, setLoading] = useState(false);
+
+  const submitForm = async (values) => {
+    try {
+      const q = query(promotionsCollection, where('email', '==', values.email));
+      const isOnTheList = await getDocs(q);
+
+      if (isOnTheList.docs.length >= 1) {
+        showErrorToast('sorry, you are already on the list');
+        formik.resetForm();
+        setLoading(false);
+        return false;
+      }
+
+      await addDoc(promotionsCollection, {
+        email: values.email,
+      });
+      formik.resetForm();
+      setLoading(false);
+      showSuccessToast('Congratulations!!! :D');
+    } catch (error) {
+      showErrorToast(error);
+    }
+  };
 
   const formik = useFormik({
     initialValues: { email: '' },
@@ -20,7 +44,7 @@ const Enroll = () => {
     }),
     onSubmit: (values) => {
       setLoading(true);
-      // submit form
+      submitForm(values);
     },
   });
 
