@@ -72,5 +72,6 @@ Tracking my progress through the course.
 ✅ Lesson 21: Admin players list part 2 - Complete <br>
 ✅ Lesson 22: Add/edit player part 1 - Complete <br>
 ✅ Lesson 23: Add/edit player part 2 - Complete <br>
+✅ Lesson 24: Add/edit player part 3 - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
