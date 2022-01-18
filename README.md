@@ -73,6 +73,8 @@ Tracking my progress through the course.
 ✅ Lesson 22: Add/edit player part 1 - Complete <br>
 ✅ Lesson 23: Add/edit player part 2 - Complete <br>
 ✅ Lesson 24: Add/edit player part 3 - Complete <br>
-✅ Lesson 25: Uploading player images part 1 - To Be Continued... <br>
+✅ Lesson 25: Uploading player images part 1 - Complete <br>
+
+- Note: The video course uses react-firebase-file-uploader. I found it not to work due to changes to the Firebase api. I found a react hook uploader that I updated to use current Firebase. This is now working.
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)

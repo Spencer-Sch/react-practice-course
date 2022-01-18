@@ -17,6 +17,7 @@ Dummy site for the Manchester City soccer team
 ✅ React Toastify v7.0.3 [docs](https://fkhadra.github.io/react-toastify/introduction/) </br>
 ✅ React Move v16.3.0 [docs](https://github.com/sghall/react-move) </br>
 ✅ D3 Ease v2.0.0 [docs](https://www.npmjs.com/package/d3-ease/v/2.0.0) </br>
+✅ uuidv4 v6.2.12 [docs](https://www.npmjs.com/package/uuidv4) </br>
 
 ---
 

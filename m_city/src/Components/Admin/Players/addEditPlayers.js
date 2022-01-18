@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AdminLayout from '../../../Hoc/AdminLayout';
 
-import Fileuploader from '../../Utils/fileUploader';
+import CustomUploader from '../../Utils/CustomUploader';
 
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -68,7 +68,6 @@ const AddEditPlayers = (props) => {
         })
         .catch((error) => showErrorToast(error));
     } else {
-      /////////////
       const docRef = doc(playersCollection, param);
       updateDoc(docRef, dataToSubmit)
         .then(() => {
@@ -111,11 +110,10 @@ const AddEditPlayers = (props) => {
     <AdminLayout title={formType === 'add' ? 'Add player' : 'Edit player'}>
       <div className="editplayers_dialog_wrapper">
         <div>
+          <FormControl>
+            <CustomUploader dir="player" />
+          </FormControl>
           <form onSubmit={formik.handleSubmit}>
-            <FormControl>
-              <Fileuploader dir="player" />
-            </FormControl>
-
             <hr />
             <h4>Player info</h4>
             <div className="mb-5">

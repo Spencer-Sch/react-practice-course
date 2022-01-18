@@ -3,7 +3,11 @@ import { firebase, FBstorage } from '../../firebase';
 import { getStorage, ref } from 'firebase/storage';
 import FileUploader from 'react-firebase-file-uploader';
 import { CircularProgress } from '@material-ui/core';
-import { getSelectionRange } from '@testing-library/user-event/dist/utils';
+
+//////////////////////////////////
+// NO LONGER USING THIS COMPONENT
+// KEEPING FOR REFERENCE
+//////////////////////////////////
 
 class Fileuploader extends Component {
   state = {
