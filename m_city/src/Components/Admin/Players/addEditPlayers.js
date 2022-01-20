@@ -30,6 +30,7 @@ const defaultValues = {
   lastname: '',
   number: '',
   position: '',
+  image: '',
 };
 
 const AddEditPlayers = (props) => {
@@ -48,6 +49,7 @@ const AddEditPlayers = (props) => {
         .min(0, 'The minimum is zero')
         .max(100, 'The maximum is 100'),
       position: Yup.string().required('This input is required'),
+      image: Yup.string().required('This input is required'),
     }),
     onSubmit: (values) => {
       submitForm(values);
@@ -106,12 +108,20 @@ const AddEditPlayers = (props) => {
     }
   }, [props.match.params.playerid]);
 
+  const updateImageName = (filename) => {
+    formik.setFieldValue('image', filename);
+  };
+
   return (
     <AdminLayout title={formType === 'add' ? 'Add player' : 'Edit player'}>
       <div className="editplayers_dialog_wrapper">
         <div>
-          <FormControl>
-            <CustomUploader dir="player" />
+          <FormControl error={selectIsError(formik, 'image')}>
+            <CustomUploader
+              dir="players"
+              filename={(filename) => updateImageName(filename)}
+            />
+            {selectErrorHelper(formik, 'image')}
           </FormControl>
           <form onSubmit={formik.handleSubmit}>
             <hr />

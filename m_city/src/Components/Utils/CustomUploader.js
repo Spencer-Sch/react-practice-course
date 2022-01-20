@@ -15,7 +15,11 @@ const CustomUploader = (props) => {
   const [file, setFile] = useState(null);
   const [url, setURL] = useState('');
   const [name, setName] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+
+  function handleChange(e) {
+    setFile(e.target.files[0]);
+  }
 
   useEffect(() => {
     if (file) {
@@ -24,10 +28,6 @@ const CustomUploader = (props) => {
       setName(randomName);
     }
   }, [file]);
-
-  function handleChange(e) {
-    setFile(e.target.files[0]);
-  }
 
   function getImgExtension(fileName) {
     return fileName.slice(fileName.indexOf('.'));
@@ -43,8 +43,8 @@ const CustomUploader = (props) => {
     uploadTask.on(
       'state_changed',
       () => {
-        if (!isLoading) {
-          setIsLoading(true);
+        if (!isUploading) {
+          setIsUploading(true);
         }
       },
       (error) => {
@@ -54,7 +54,8 @@ const CustomUploader = (props) => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           setFile(null);
           setURL(url);
-          setIsLoading(false);
+          setIsUploading(false);
+          props.filename(name);
         });
       }
     );
@@ -62,19 +63,44 @@ const CustomUploader = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleUpload}>
-        <input type="file" onChange={handleChange} />
-        {/* <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          disabled={!file}
+      {!url ? (
+        <>
+          <form onSubmit={handleUpload}>
+            <input type="file" onChange={handleChange} />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              disabled={!file}
+            >
+              upload
+            </Button>
+          </form>
+        </>
+      ) : null}
+      {isUploading ? (
+        <div
+          className="progress"
+          style={{ textAlign: 'center', margin: '30px 0' }}
         >
-          upload
-        </Button> */}
-      </form>
-      <img src={url} alt="" />
-      {isLoading && <CircularProgress />}
+          <CircularProgress style={{ color: '#98c6e9' }} thickness={7} />
+        </div>
+      ) : null}
+
+      {url ? (
+        <div className="image_upload_container">
+          <img
+            src={url}
+            alt={name}
+            style={{
+              width: '100%',
+            }}
+          />
+          <div className="remove" onClick={() => alert('remove')}>
+            Remove
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

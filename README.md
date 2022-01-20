@@ -77,4 +77,6 @@ Tracking my progress through the course.
 
 - Note: The video course uses react-firebase-file-uploader. I found it not to work due to changes to the Firebase api. I found a react hook uploader that I updated to use current Firebase. This is now working.
 
+✅ Lesson 26: Uploading player images part 2 - Complete <br>
+
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
