@@ -23,6 +23,7 @@ import {
 } from '@material-ui/core';
 import { playersCollection } from '../../../firebase';
 import { addDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import PlayerCard from '../../Utils/PlayerCard';
 
 const defaultValues = {
@@ -33,10 +34,13 @@ const defaultValues = {
   image: '',
 };
 
+const storage = getStorage();
+
 const AddEditPlayers = (props) => {
   const [loading, setLoading] = useState(false);
   const [formType, setFormType] = useState('');
   const [values, setValues] = useState(defaultValues);
+  const [defaultImg, setDefaultImg] = useState('');
 
   const formik = useFormik({
     enableReinitialize: true,
@@ -52,6 +56,7 @@ const AddEditPlayers = (props) => {
       image: Yup.string().required('This input is required'),
     }),
     onSubmit: (values) => {
+      // console.log(values);
       submitForm(values);
     },
   });
@@ -91,6 +96,19 @@ const AddEditPlayers = (props) => {
       getDoc(docRef)
         .then((snapshot) => {
           if (snapshot.data()) {
+            //////////////////////////////
+            const imgRef = ref(storage, `players/${snapshot.data().image}`);
+            console.log('imgRef', imgRef);
+            getDownloadURL(imgRef)
+              .then((url) => {
+                updateImageName(snapshot.data().image);
+                setDefaultImg(url);
+              })
+              .catch((error) => {
+                showErrorToast(error);
+              });
+            //////////////////////////////
+
             setFormType('edit');
             setValues(snapshot.data());
           } else {
@@ -119,6 +137,8 @@ const AddEditPlayers = (props) => {
           <FormControl error={selectIsError(formik, 'image')}>
             <CustomUploader
               dir="players"
+              defaultImg={defaultImg} // image url
+              defaultImgName={formik.values.image} // name of file
               filename={(filename) => updateImageName(filename)}
             />
             {selectErrorHelper(formik, 'image')}

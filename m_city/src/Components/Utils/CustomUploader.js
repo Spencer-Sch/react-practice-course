@@ -29,6 +29,13 @@ const CustomUploader = (props) => {
     }
   }, [file]);
 
+  // useEffect((props) => {
+  //   if (props.defaultImg) {
+  //     setName(props.defaultImgName);
+  //     setURL(props.defaultImg);
+  //   }
+  // }, []);
+
   function getImgExtension(fileName) {
     return fileName.slice(fileName.indexOf('.'));
   }
@@ -60,6 +67,8 @@ const CustomUploader = (props) => {
       }
     );
   }
+
+  console.log(props);
 
   return (
     <div>
