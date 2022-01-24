@@ -24,7 +24,6 @@ import {
 import { playersCollection } from '../../../firebase';
 import { addDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
-import PlayerCard from '../../Utils/PlayerCard';
 
 const defaultValues = {
   name: '',
