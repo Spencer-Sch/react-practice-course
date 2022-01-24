@@ -78,8 +78,10 @@ Tracking my progress through the course.
 - Note: The video course uses react-firebase-file-uploader. I found it not to work due to changes to the Firebase api. I found a react hook uploader that I updated to use current Firebase. This is now working.
 
 ✅ Lesson 26: Uploading player images part 2 - Complete <br>
-✅ Lesson 26: Uploading player images part 3 - Complete <br>
+✅ Lesson 27: Uploading player images part 3 - Complete <br>
 
 - Note: The video course uses a class based component for the fileUploader component. When creating my own customUploader component I used a functional component. This meant I needed to figure out equivalent code for my functional component to achieve the same as the instructor's class based component. I was ultimately successful.
+
+✅ Lesson 28: Creating 'the team' section - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
