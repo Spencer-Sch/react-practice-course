@@ -56,7 +56,6 @@ const AddEditPlayers = (props) => {
       image: Yup.string().required('This input is required'),
     }),
     onSubmit: (values) => {
-      // console.log(values);
       submitForm(values);
     },
   });
@@ -96,9 +95,7 @@ const AddEditPlayers = (props) => {
       getDoc(docRef)
         .then((snapshot) => {
           if (snapshot.data()) {
-            //////////////////////////////
             const imgRef = ref(storage, `players/${snapshot.data().image}`);
-            console.log('imgRef', imgRef);
             getDownloadURL(imgRef)
               .then((url) => {
                 updateImageName(snapshot.data().image);
@@ -107,8 +104,6 @@ const AddEditPlayers = (props) => {
               .catch((error) => {
                 showErrorToast(error);
               });
-            //////////////////////////////
-
             setFormType('edit');
             setValues(snapshot.data());
           } else {
@@ -130,6 +125,11 @@ const AddEditPlayers = (props) => {
     formik.setFieldValue('image', filename);
   };
 
+  const resetImage = () => {
+    formik.setFieldValue('image', '');
+    setDefaultImg('');
+  };
+
   return (
     <AdminLayout title={formType === 'add' ? 'Add player' : 'Edit player'}>
       <div className="editplayers_dialog_wrapper">
@@ -140,6 +140,7 @@ const AddEditPlayers = (props) => {
               defaultImg={defaultImg} // image url
               defaultImgName={formik.values.image} // name of file
               filename={(filename) => updateImageName(filename)}
+              resetImage={() => resetImage()}
             />
             {selectErrorHelper(formik, 'image')}
           </FormControl>

@@ -24,17 +24,16 @@ const CustomUploader = (props) => {
   useEffect(() => {
     if (file) {
       const randomName = `${uuidv4()}${getImgExtension(file.name)}`;
-      // console.log('random name: ', randomName);
       setName(randomName);
     }
   }, [file]);
 
-  // useEffect((props) => {
-  //   if (props.defaultImg) {
-  //     setName(props.defaultImgName);
-  //     setURL(props.defaultImg);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (props.defaultImg) {
+      setName(props.defaultImgName);
+      setURL(props.defaultImg);
+    }
+  }, [props.defaultImg, props.defaultImgName]);
 
   function getImgExtension(fileName) {
     return fileName.slice(fileName.indexOf('.'));
@@ -42,9 +41,6 @@ const CustomUploader = (props) => {
 
   function handleUpload(e) {
     e.preventDefault();
-    // const storageRef = ref(storage, `/${props.dir}/${file.name}`);
-    // console.log(`/${props.dir}/${uuidv4()}${getImgExtension(file.name)}`);
-    // console.log('Name: ', name);
     const storageRef = ref(storage, `/${props.dir}/${name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
     uploadTask.on(
@@ -68,7 +64,13 @@ const CustomUploader = (props) => {
     );
   }
 
-  console.log(props);
+  const removeImg = () => {
+    setName('');
+    setIsUploading(false);
+    setURL('');
+    setFile(null);
+    props.resetImage();
+  };
 
   return (
     <div>
@@ -105,7 +107,7 @@ const CustomUploader = (props) => {
               width: '100%',
             }}
           />
-          <div className="remove" onClick={() => alert('remove')}>
+          <div className="remove" onClick={() => removeImg()}>
             Remove
           </div>
         </div>
