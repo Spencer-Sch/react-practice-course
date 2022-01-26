@@ -89,6 +89,7 @@ const AddEditMatches = (props) => {
       : null;
 
   const submitForm = (values) => {
+    const param = props.match.params.matchid;
     let dataToSubmit = values;
 
     teams.forEach((team) => {
@@ -101,6 +102,7 @@ const AddEditMatches = (props) => {
     });
 
     setLoading(true);
+
     if (formType === 'add') {
       addDoc(matchesCollection, dataToSubmit)
         .then(() => {
@@ -112,19 +114,19 @@ const AddEditMatches = (props) => {
         .finally(() => {
           setLoading(false);
         });
-    } // else {
-    // const docRef = doc(matchesCollection, param);
-    // updateDoc(docRef, dataToSubmit)
-    //   .then(() => {
-    //     showSuccessToast('Player updated');
-    //   })
-    //   .catch((error) => {
-    //     showErrorToast(error);
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
-    // }
+    } else {
+      const docRef = doc(matchesCollection, param);
+      updateDoc(docRef, dataToSubmit)
+        .then(() => {
+          showSuccessToast('Match updated');
+        })
+        .catch((error) => {
+          showErrorToast(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   };
 
   useEffect(() => {
