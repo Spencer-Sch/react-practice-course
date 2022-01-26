@@ -86,5 +86,6 @@ Tracking my progress through the course.
 ✅ Lesson 29: Finishing 'the team' section - Complete <br>
 ✅ Lesson 30: Admin matches list - Complete <br>
 ✅ Lesson 31: Add/edit match part 1 - Complete <br>
+✅ Lesson 32: Add/edit match part 2 - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
