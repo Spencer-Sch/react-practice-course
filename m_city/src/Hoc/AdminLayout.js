@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AdminNav from '../Components/Admin/Nav/AdminNav';
 
 const AdminLayout = (props) => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <div className="admin_container">
       <div className="admin_left_nav">

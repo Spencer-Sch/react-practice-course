@@ -17,6 +17,14 @@ const TheTeam = () => {
   const [players, setPlayers] = useState(null);
 
   useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
+  useEffect(() => {
     if (!players) {
       const q = query(playersCollection);
       getDocs(q)
