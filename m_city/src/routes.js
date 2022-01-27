@@ -9,6 +9,7 @@ import Footer from './Components/Header_footer/Footer';
 import Home from './Components/Home';
 import SignIn from './Components/SignIn';
 import TheTeam from './Components/theTeam';
+import TheMatches from './Components/TheMatches';
 
 import Dashboard from './Components/Admin/Dashboard';
 import AdminPlayers from './Components/Admin/Players';
@@ -55,6 +56,7 @@ const Routes = ({ user }) => {
         />
         {/* Other Navbar routes */}
         <Route path="/dashboard" component={AuthGuard(Dashboard)} />
+        <Route path="/the_matches" component={TheMatches} />
         <Route path="/the_team" component={TheTeam} />
         <Route
           path="/sign_in"
