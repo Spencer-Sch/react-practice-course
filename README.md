@@ -94,5 +94,10 @@ Tracking my progress through the course.
 ✅ Lesson 37: Filter matches part 2 - Complete <br>
 ✅ Lesson 38: Not found - Complete <br>
 ✅ Lesson 39: Changing the rules - Complete <br>
+❌ Lesson 40: Deploying - Skipped <br>
+
+- Note: will deploy at a later time.
+
+✅ PROJECT COMPLETE
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
