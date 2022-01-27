@@ -91,5 +91,6 @@ Tracking my progress through the course.
 ✅ Lesson 34: Add/edit match part 4 - Complete <br>
 ✅ Lesson 35: Creating the league's table - Complete <br>
 ✅ Lesson 36: Filter matches part 1 - Complete <br>
+✅ Lesson 37: Filter matches part 2 - Complete <br>
 
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
