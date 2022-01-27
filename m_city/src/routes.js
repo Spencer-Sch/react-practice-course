@@ -10,6 +10,7 @@ import Home from './Components/Home';
 import SignIn from './Components/SignIn';
 import TheTeam from './Components/theTeam';
 import TheMatches from './Components/TheMatches';
+import NotFound from './Components/NotFound/NotFound';
 
 import Dashboard from './Components/Admin/Dashboard';
 import AdminPlayers from './Components/Admin/Players';
@@ -25,46 +26,35 @@ const Routes = ({ user }) => {
         {/* Admin Matches routes */}
         <Route
           path="/admin_matches/edit_match/:matchid"
-          exact
           component={AuthGuard(AddEditMatches)}
         />
         <Route
           path="/admin_matches/add_match"
-          exact
           component={AuthGuard(AddEditMatches)}
         />
-        <Route
-          path="/admin_matches"
-          exact
-          component={AuthGuard(AdminMatches)}
-        />
+        <Route path="/admin_matches" component={AuthGuard(AdminMatches)} />
         {/* Admin Players routes */}
         <Route
           path="/admin_players/edit_player/:playerid"
-          exact
           component={AuthGuard(AddEditPlayers)}
         />
         <Route
           path="/admin_players/add_player"
-          exact
           component={AuthGuard(AddEditPlayers)}
         />
-        <Route
-          path="/admin_players"
-          exact
-          component={AuthGuard(AdminPlayers)}
-        />
+        <Route path="/admin_players" component={AuthGuard(AdminPlayers)} />
         {/* Other Navbar routes */}
         <Route path="/dashboard" component={AuthGuard(Dashboard)} />
         <Route path="/the_matches" component={TheMatches} />
         <Route path="/the_team" component={TheTeam} />
         <Route
           path="/sign_in"
-          exact
           component={(props) => <SignIn {...props} user={user} />}
         />
         {/* Home route */}
         <Route path="/" exact component={Home} />
+        {/* Not Found */}
+        <Route component={NotFound} />
       </Switch>
       <ToastContainer />
       <Footer />
