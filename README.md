@@ -18,6 +18,8 @@ Tracking my progress through the course.
 
 ### Project 2: [M.City](./m_city)
 
+### Project 3: [Waves](./waves)
+
 [Back To The Top](#react-practice-course-learn-by-practicing-2021-edition)
 
 ---
